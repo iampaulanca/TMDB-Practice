@@ -37,7 +37,20 @@ struct MovieCardView: View {
                             timeRemaining > 0 ? timeRemaining -= 1 : timer.upstream.connect().cancel()
                         }
                 } else {
-                    EmptyView()
+                    HStack(alignment: .center) {
+                        Image(systemName: "wifi.slash")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                        Spacer()
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: 100)
+                    .padding()
+                    .background {
+                        RoundedRectangle(cornerRadius: 5.0)
+                            .stroke(.black, lineWidth: 2.0)
+                    }
+                    .padding([.top, .horizontal])
+                        
                 }
             case .success(let image):
                 HStack {

@@ -17,23 +17,29 @@ struct ContentView: View {
     }
     
     var body: some View {
-        VStack(alignment:.leading) {
-            SearchView(movieViewModel: movieViewModel, movieTitle: $movieTitle)
-            ScrollView {
-                VStack(alignment: .leading) {
-                    ForEach(movieViewModel.movies, id: \.id) { movie in
-                        MovieCardView(realMovie: movie, movieViewModel: movieViewModel)
-                    }
-                }
-                Spacer()
+        NavigationStack {
+            NavigationLink("Button") {
+                ColumnViewPractice(movieViewModel: movieViewModel)
             }
-            .scrollIndicators(.hidden)
-            .alert("Error", isPresented: $movieViewModel.errorShow) {
-                
-            } message: {
-                Text(movieViewModel.errorString)
+            VStack(alignment:.leading) {
+                SearchView(movieViewModel: movieViewModel, movieTitle: $movieTitle)
+                ScrollView {
+                    VStack(alignment: .leading) {
+                        ForEach(movieViewModel.movies, id: \.id) { movie in
+                            MovieCardView(realMovie: movie, movieViewModel: movieViewModel)
+                        }
+                    }
+                    Spacer()
+                }
+                .scrollIndicators(.hidden)
+                .alert("Error", isPresented: $movieViewModel.errorShow) {
+                    
+                } message: {
+                    Text(movieViewModel.errorString)
+                }
             }
         }
+        
     }
 }
 

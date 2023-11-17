@@ -25,10 +25,11 @@ extension CustomError {
 }
 
 protocol NetworkServiceProtocol {
-    func cachedNetwork<T:Codable>(request: URLRequest, completion: @escaping(Result<T,CustomError>) -> Void)
+    func cachedNetwork<T:Codable>(request: URLRequest) async throws -> T
+    func cachedNetworkImage(request: URLRequest) async throws -> UIImage
 }
 
-class NetworkService {
+class NetworkService: NetworkServiceProtocol {
     
     // Create a URLSession configuration with a custom cache
     var session: URLSession
@@ -40,7 +41,7 @@ class NetworkService {
 
         // Configure session
         let config = URLSessionConfiguration.default
-        config.urlCache = cache
+        config.urlCache = .shared
         config.requestCachePolicy = .returnCacheDataElseLoad
 
         // Create a URLSession with the custom configuration

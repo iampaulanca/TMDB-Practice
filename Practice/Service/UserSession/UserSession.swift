@@ -27,7 +27,7 @@ class UserSession: ObservableObject {
     func fetchConfigurations() async {
         do {
             guard let url = URL(string: "https://api.themoviedb.org/3/configuration") else { throw URLError(.badURL) }
-            let request = URLRequest(url: url)
+            let request = URLRequest(url: url, cachePolicy: .returnCacheDataElseLoad)
             let userConfiguration: UserConfigResponse = try await networkService.cachedNetwork(request: request)
             self.userConfiguration = userConfiguration
         } catch {

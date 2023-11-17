@@ -10,7 +10,7 @@ import Combine
 import UIKit
 
 class MovieViewModel: ObservableObject {
-    let networkService: NetworkService
+    let networkService: NetworkServiceProtocol
     let userSession: UserSession
     @Published var errorString = ""
     @Published var errorShow = false
@@ -18,7 +18,7 @@ class MovieViewModel: ObservableObject {
     
     private var cancellables = Set<AnyCancellable>()
     
-    init(userSession: UserSession, networkService: NetworkService) {
+    init(userSession: UserSession, networkService: NetworkServiceProtocol) {
         self.networkService = networkService
         self.userSession = userSession
         

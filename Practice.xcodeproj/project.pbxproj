@@ -27,6 +27,7 @@
 		787E57F92B06E1C600C34229 /* RealMovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787E57F82B06E1C600C34229 /* RealMovieResponse.swift */; };
 		787E57FD2B06E28300C34229 /* RealMovieResponseJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787E57FC2B06E28300C34229 /* RealMovieResponseJSON.swift */; };
 		787E57FF2B06E2DD00C34229 /* Dummies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787E57FE2B06E2DD00C34229 /* Dummies.swift */; };
+		787E58012B072AEF00C34229 /* ColumnViewPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787E58002B072AEF00C34229 /* ColumnViewPractice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		787E57F82B06E1C600C34229 /* RealMovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealMovieResponse.swift; sourceTree = "<group>"; };
 		787E57FC2B06E28300C34229 /* RealMovieResponseJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealMovieResponseJSON.swift; sourceTree = "<group>"; };
 		787E57FE2B06E2DD00C34229 /* Dummies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummies.swift; sourceTree = "<group>"; };
+		787E58002B072AEF00C34229 /* ColumnViewPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnViewPractice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 				787E57B22B0588D400C34229 /* ContentView.swift */,
 				787E57EA2B06DD3200C34229 /* MovieCardView.swift */,
 				787E57EC2B06DE6700C34229 /* SearchView.swift */,
+				787E58002B072AEF00C34229 /* ColumnViewPractice.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				787E57FF2B06E2DD00C34229 /* Dummies.swift in Sources */,
 				787E57F12B06E18300C34229 /* Movie.swift in Sources */,
 				787E57E12B05F97E00C34229 /* NetworkService.swift in Sources */,
+				787E58012B072AEF00C34229 /* ColumnViewPractice.swift in Sources */,
 				787E57ED2B06DE6700C34229 /* SearchView.swift in Sources */,
 				787E57B12B0588D400C34229 /* PracticeApp.swift in Sources */,
 				787E57E32B05FD2F00C34229 /* MovieViewModel.swift in Sources */,
